@@ -8,6 +8,15 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
+hr{
+    width: 80%;
+    margin: auto;
+
+    border-width: 0.01px;
+    border-radius: 10%;
+    color: #9ca3af;
+}
+
 /* HEADER */
 .headerContainer{
     display: flex;
@@ -17,6 +26,8 @@ html{
     height: 40vh;
 
     background-image: url("/img/2880737.webp");
+    background-size: cover;
+    background-position: center;
 }
 
 .header{
@@ -39,14 +50,19 @@ html{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
 
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-color: #1e293b;
 }
 
     .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         width: 300px;
-        margin-top: 50px;
 
         background-color: #475569;
         border-radius: 8px;
@@ -60,6 +76,7 @@ html{
         .card__img{
             width: 100%;
             height: 300px;
+            margin-bottom: 5px;
 
             border-top-right-radius: 8px;
             border-top-left-radius: 8px;
@@ -69,13 +86,12 @@ html{
             display: inline;
 
             font-size: 25px;
-            margin: 5px 0px 15px 15px;
+            margin: 5px;
             color: white;
         }
 
         .card__status--unknown{
             display: inline-block;
-            margin-left: 10px;
 
             font-weight: 300;
             font-size: 15px;
@@ -84,7 +100,6 @@ html{
 
         .card__status--dead{
             display: inline-block;
-            margin-left: 10px;
 
             font-weight: 300;
             font-size: 15px;
@@ -93,7 +108,6 @@ html{
 
         .card__status--alive{
             display: inline-block;
-            margin-left: 10px;
 
             font-weight: 300;
             font-size: 15px;
@@ -120,3 +134,12 @@ html{
             font-weight: 300;
             color: white;
         }
+
+/* FOOTER */
+.footer{
+    display: flex;
+    width: 100%;
+    height: 200px;
+
+    background-color: #475569;
+}
