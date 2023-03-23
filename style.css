@@ -5,61 +5,34 @@
 }
 
 html{
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* HEADER */
-.header{
+.headerContainer{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    width: 100vw;
+    width: 100%;
     height: 40vh;
 
-    background-color: #1e3a8a;
+    background-image: url("/img/2880737.webp");
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    padding: 50px;
+    background-color: #1e293b55;
 }
 
     .header__title{
-        font-size: calc(0.5em + (3vw + 1vh));
+        font-size: calc(1.2em + (2vw + 1vh));
         color: white;
     }
-
-    .header__by{
-        display: inline-block;
-        margin-bottom: 50px;
-
-        color: #dbeafe;
-        transition: text-shadow, transform 0.2s;
-    }
-
-        .header__by:hover{
-            cursor: pointer;
-            text-shadow: 0 0 10px #dbeafe;
-            transform: scale(1.15);
-        }
-
-    .header__p{
-        color: white;
-    }
-
-    .header__search{
-        margin-top: 30px;
-        width: 40%;
-
-        padding: 5px;
-    }
-
-    
-        @media (max-width: 600px) {
-            .header__search {
-                width: 80%;
-            }
-
-            .header__p{
-                width: 70%;
-            }
-        }
     
 /* MAIN */
 .cardContainer{
@@ -67,57 +40,83 @@ html{
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 30px;
+
+    background-color: #1e293b;
 }
 
     .card{
         width: 300px;
-        height: 400px;
         margin-top: 50px;
 
-        border: 2px solid #e5e7eb;
+        background-color: #475569;
+        border-radius: 8px;
+        transition: transform 0.2s;
+    }
+
+    .card:hover{
+        transform: scale(1.15);
     }
 
         .card__img{
             width: 100%;
-            height: 60%;
+            height: 300px;
+
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
         }
 
         .card__name{
-            display: inline-block;
+            display: inline;
 
-            font-size: 30px;
+            font-size: 25px;
             margin: 5px 0px 15px 15px;
+            color: white;
         }
 
         .card__status--unknown{
             display: inline-block;
+            margin-left: 10px;
 
+            font-weight: 300;
             font-size: 15px;
             color: #9ca3af;
         }
 
         .card__status--dead{
             display: inline-block;
+            margin-left: 10px;
 
+            font-weight: 300;
             font-size: 15px;
             color: #b91c1c;
         }
 
         .card__status--alive{
             display: inline-block;
+            margin-left: 10px;
 
+            font-weight: 300;
             font-size: 15px;
             color: #16a34a;
         }
 
         .card__species{
-            padding: 5px;
+            font-size: 15px;
+            padding: 7px;
+            font-weight: 300;
+            color: white;
         }
 
         .card__gender{
-            padding: 5px;
+            font-size: 15px;
+            padding: 7px;
+            font-weight: 300;
+            color: white;
         }
 
         .card__origin{
-            padding: 5px;
+            font-size: 15px;
+            padding: 7px;
+            font-weight: 300;
+            color: white;
         }
