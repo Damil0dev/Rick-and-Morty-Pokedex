@@ -10,24 +10,27 @@ html{
 
 /* HEADER */
 .header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
 
-    padding-top: 60px;
     background-color: #1e3a8a;
 }
 
     .header__title{
-        text-align: center;
-
+        font-size: calc(0.5em + (3vw + 1vh));
         color: white;
     }
 
     .header__by{
-
-        margin-bottom: 30px;
+        display: inline-block;
+        margin-bottom: 50px;
 
         color: #dbeafe;
+        transition: text-shadow, transform 0.2s;
     }
 
         .header__by:hover{
@@ -37,16 +40,24 @@ html{
         }
 
     .header__p{
-        display: block;
-        text-align: center;
-
         color: white;
     }
 
     .header__search{
-        display: block;
-        margin: auto;
         margin-top: 30px;
+        width: 40%;
 
-
+        padding: 5px;
     }
+
+    
+        @media (max-width: 600px) {
+            .header__search {
+                width: 80%;
+            }
+
+            .header__p{
+                width: 70%;
+            }
+        }
+    
