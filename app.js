@@ -1,4 +1,4 @@
-// Llamada a la API de Rick and Morty
+// Llamada a la API
 async function getCharacters() {
     const characters = [];
   
@@ -17,17 +17,18 @@ async function getCharacters() {
   
     return characters;
   }
-  
-getCharacters()
+  getCharacters()
+
+
+//Creacion de cada tarjeta
 .then(characters => {
 
-// Creación de las tarjetas
 const cardsContainer = document.getElementById('cards-container'); 
-const firstIndex = Math.floor(Math.random() * characters.length);
+const firstI = Math.floor(Math.random() * characters.length - 10);
 
-
-for (let i = 0; i < 6; i++) {
+for (let i = firstI; i < firstI + 6; i++) {
     const character = characters[i];
+    
     const card = document.createElement('div');
     card.classList.add('card');
 
