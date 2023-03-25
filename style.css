@@ -67,7 +67,7 @@ hr{
 
         background-color: #475569;
         border-radius: 8px;
-        box-shadow: 0 0 10px 1px black;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
         transition: transform 0.2s;
     }
 
@@ -147,6 +147,7 @@ footer{
     height: 200px;
 
     background-color: #475569;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
 }
 
     footer span {
@@ -176,4 +177,48 @@ footer{
         .contact__icon:hover{
             cursor: pointer;
             transform: scale(1.25);
+        }
+
+/* BARRA DE BUSQUEDA */
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+    background-color: #475569;
+    box-shadow: 0px -2px 2px rgba(0, 0, 0, 0.5);
+}
+
+    .search__bar{
+        width: 50vw;
+
+        padding: 15px;
+        border: none;
+        outline: none;
+        background-color: #1e293b;
+        color: white;
+        font-size: 14px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+        .search__bar:active{
+            border: none;
+        }
+
+    .search__btn{
+        position: relative;
+        bottom: -7px;
+
+        padding: 11px;
+        border: none;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+        .search__btn--lupa{
+            display: block;
+            width: 25px;
+            height: 25px;
         }
