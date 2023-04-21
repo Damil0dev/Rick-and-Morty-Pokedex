@@ -39,9 +39,9 @@ function createCards(sourceFromCharacters, cuantity, actualIndex) {
             <h3 class="${class_status}">${character.status}</h3>
         </div>
         <hr>
-        <h3 class="card__species">${character.species}</h3>
-        <h3 class="card__gender">${character.gender}</h3>
-        <h3 class="card__origin">${character.origin.name}</h3>
+        <h3 class="card__species">Species: ${character.species}</h3>
+        <h3 class="card__gender">Gender: ${character.gender}</h3>
+        <h3 class="card__origin">Origin: ${character.origin.name}</h3>
     `;
     cardsContainer.appendChild(card);
   }
@@ -92,5 +92,11 @@ searchForm.addEventListener("submit", (e) => {
   e.preventDefault()
   search(searchInput.value)
   removeAllChilds()
-  createCards(filteredCharacters, filteredCharacters.length, 0)
+  if(filteredCharacters.length === 0){
+    alert("adasd")
+    document.getElementById("error").style.display="block"
+  } else {
+    document.getElementById("error").style.display="none"
+    createCards(filteredCharacters, filteredCharacters.length, 0)
+  }
 })

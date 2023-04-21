@@ -65,6 +65,7 @@ hr{
         align-items: center;
         text-align: center;
         width: 300px;
+        max-height: 470px;
 
         background-color: #475569;
         border-radius: 8px;
@@ -223,3 +224,12 @@ footer{
             width: 25px;
             height: 25px;
         }
+
+/* ERROR: NO MATCHES FOUND */
+.cardContainer__error{
+    display: none;
+
+    background-color: #475569;
+    color: #b91c1c;
+    text-align: center;
+}
